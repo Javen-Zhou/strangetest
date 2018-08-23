@@ -4,9 +4,11 @@ import com.hazelcast.core.IMap;
 import com.hazelcast.jet.IMapJet;
 import com.hazelcast.jet.Jet;
 import com.hazelcast.jet.JetInstance;
+import com.hazelcast.jet.Job;
 import com.hazelcast.jet.aggregate.AggregateOperation1;
 import com.hazelcast.jet.aggregate.AggregateOperations;
 import com.hazelcast.jet.config.JetConfig;
+import com.hazelcast.jet.config.JobConfig;
 import com.hazelcast.jet.pipeline.*;
 import com.hazelcast.jet.stream.DistributedStream;
 import org.junit.Test;
@@ -30,6 +32,13 @@ public class TestJetAll {
 	private static final String MAP_NAME = "map";
 	private static final String SINK_LIST = "list";
 	private static final String LIST_NAME = "inList";
+
+
+
+
+
+
+
 
 	@Test
 	public void testA() throws InterruptedException {
@@ -143,7 +152,8 @@ public class TestJetAll {
 				//.groupingKey(e -> e.getName())
 				.aggregate(AggregateOperations.averagingDouble(e -> Long.valueOf(e.getAge())))
 				//.drainTo(Sinks.list(SINK_LIST));
-		.drainTo(Sinks.files("G:\\test"));
+		//.drainTo(Sinks.files("G:\\test"));
+		.drainTo(Sinks.logger());
 		return p;
 	}
 

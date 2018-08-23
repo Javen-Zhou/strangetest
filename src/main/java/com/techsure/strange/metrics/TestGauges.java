@@ -30,7 +30,7 @@ public class TestGauges {
 		reporter.start(3, TimeUnit.SECONDS);
 
 		//实例化一个Gauge
-		Gauge<Integer> gauge = new Gauge<Integer>() {
+		Gauge gauge = new Gauge<Integer>() {
 			@Override
 			public Integer getValue() {
 				return queue.size();

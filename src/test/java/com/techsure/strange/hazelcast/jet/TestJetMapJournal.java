@@ -2,6 +2,7 @@ package com.techsure.strange.hazelcast.jet;
 
 import com.hazelcast.config.EventJournalConfig;
 import com.hazelcast.config.MapConfig;
+import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IList;
 import com.hazelcast.jet.IMapJet;
 import com.hazelcast.jet.Jet;
@@ -25,12 +26,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.lang.NonNull;
 
 import java.io.Serializable;
+import java.sql.Time;
 import java.util.*;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 import static com.hazelcast.jet.Util.mapEventNewValue;
 import static com.hazelcast.jet.Util.mapPutEvents;
 import static com.hazelcast.jet.pipeline.JournalInitialPosition.START_FROM_CURRENT;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * @author zhoujian
@@ -38,8 +43,217 @@ import static com.hazelcast.jet.pipeline.JournalInitialPosition.START_FROM_CURRE
  */
 public class TestJetMapJournal {
 
+	private static final Logger logger = LoggerFactory.getLogger(TestJetMapJournal.class);
+
 	private static final String IN_MAP_NAME = "inMap";
 	private static final String OUT_MAP_NAME = "outMap";
+
+
+	@Test
+	public void testGuaranteeA() throws InterruptedException {
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		Lock lock = jet.getHazelcastInstance().getLock("Lock");
+		lock.lock();
+		Job job = jet.getJob("Test");
+		if (job == null) {
+			JobConfig jobConfig = new JobConfig();
+			jobConfig.setProcessingGuarantee(ProcessingGuarantee.EXACTLY_ONCE);
+			jobConfig.setSnapshotIntervalMillis(SECONDS.toMillis(2));
+			jobConfig.setName("Test");
+			jet.newJob(buildPipeline(), jobConfig);
+		} else {
+			job.restart();
+		}
+		lock.unlock();
+
+		while(true){
+			TimeUnit.SECONDS.sleep(3L);
+		}
+	}
+
+	@Test
+	public void testGuaranteeB() throws InterruptedException {
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		Lock lock = jet.getHazelcastInstance().getLock("Lock");
+		lock.lock();
+		Job job = jet.getJob("Test");
+		if (job == null) {
+			JobConfig jobConfig = new JobConfig();
+			jobConfig.setProcessingGuarantee(ProcessingGuarantee.EXACTLY_ONCE);
+			jobConfig.setSnapshotIntervalMillis(SECONDS.toMillis(2));
+			jobConfig.setName("Test");
+			jet.newJob(buildPipeline(), jobConfig);
+		} else {
+			job.restart();
+		}
+		lock.unlock();
+
+		while(true){
+			TimeUnit.SECONDS.sleep(3L);
+		}
+	}
+
+	@Test
+	public void testSetData() throws InterruptedException {
+		Long times = 1533713160000L;
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		IMapJet<Long, MetricVo> map = jet.getMap(IN_MAP_NAME);
+		for (int k = 0; k < 5; k++) {
+			times = times + k * 5000L;
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < 5; j++) {
+					MetricVo metricVo = new MetricVo();
+					metricVo.setMetricId((long) i);
+					metricVo.setMetricValue((long) i + j);
+					metricVo.setGenerateTime(times + j * 1000);
+					logger.info("id:{},time:{},value:{}", metricVo.getMetricId(), DateFormatUtils.format(metricVo.getGenerateTime(), "yyyy-MM-dd HH:mm:ss"), metricVo.getMetricValue());
+					map.set(metricVo.getMetricId(), metricVo);
+				}
+				//TimeUnit.SECONDS.sleep(5L);
+
+			}
+		}
+		SECONDS.sleep(5L);
+		jet.shutdown();
+
+	}
+
+	@Test
+	public void testHandleDataA() throws InterruptedException {
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		Lock lock = jet.getHazelcastInstance().getLock("Lock");
+		lock.lock();
+		Job job = jet.getJob("Test");
+		if (job == null) {
+			JobConfig jobConfig = new JobConfig();
+			jobConfig.setProcessingGuarantee(ProcessingGuarantee.EXACTLY_ONCE);
+			jobConfig.setSnapshotIntervalMillis(SECONDS.toMillis(2));
+			jobConfig.setName("Test");
+			jet.newJob(buildPipeline(), jobConfig).join();
+		} else {
+			job.restart();
+		}
+		lock.unlock();
+		Thread thread = new Thread(()->{
+			try {
+				SECONDS.sleep(20L);
+				IMapJet<Long,MetricVo> map = jet.getMap(IN_MAP_NAME);
+
+				HazelcastInstance instance = jet.getHazelcastInstance();
+				BlockingQueue<MetricVo> queue = instance.getQueue("Queue");
+				Long begin = System.currentTimeMillis();
+				Long end = System.currentTimeMillis();
+				while(true){
+					MetricVo metricVo = queue.take();
+					map.set(metricVo.getMetricId(),metricVo);
+					end = System.currentTimeMillis();
+					logger.info("时间差:{}", end - begin);
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		});
+		thread.start();
+
+		while (true){
+			SECONDS.sleep(2L);
+		}
+	}
+
+	@Test
+	public void testHandleDataAA() throws InterruptedException {
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		Lock lock = jet.getHazelcastInstance().getLock("Lock");
+		lock.lock();
+		Job job = jet.getJob("Test");
+		if (job == null) {
+			JobConfig jobConfig = new JobConfig();
+			jobConfig.setName("Test");
+			jobConfig.setProcessingGuarantee(ProcessingGuarantee.EXACTLY_ONCE);
+			jobConfig.setSnapshotIntervalMillis(SECONDS.toMillis(2));
+			jet.newJob(buildPipeline(), jobConfig);
+		} else {
+			job.restart();
+		}
+		lock.unlock();
+		Thread thread = new Thread(()->{
+			try {
+				SECONDS.sleep(20L);
+				IMapJet<Long,MetricVo> map = jet.getMap(IN_MAP_NAME);
+
+				HazelcastInstance instance = jet.getHazelcastInstance();
+				BlockingQueue<MetricVo> queue = instance.getQueue("Queue");
+				Long begin = System.currentTimeMillis();
+				Long end = System.currentTimeMillis();
+				while(true){
+					MetricVo metricVo = queue.take();
+					map.set(metricVo.getMetricId(),metricVo);
+					end = System.currentTimeMillis();
+					logger.info("时间差:{}", end - begin);
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+		});
+		thread.start();
+
+		while (true){
+			SECONDS.sleep(2L);
+		}
+	}
+
+	@Test
+	public void testHandleDataB() throws InterruptedException {
+		JetConfig jetConfig = getJetConfig();
+		JetInstance jet = Jet.newJetInstance(jetConfig);
+		Lock lock = jet.getHazelcastInstance().getLock("Lock");
+		lock.lock();
+		Job job = jet.getJob("Test");
+		if (job == null) {
+			JobConfig jobConfig = new JobConfig();
+			jobConfig.setName("Test");
+			jobConfig.setProcessingGuarantee(ProcessingGuarantee.EXACTLY_ONCE);
+			jobConfig.setSnapshotIntervalMillis(SECONDS.toMillis(2));
+			jet.newJob(buildPipeline(), jobConfig);
+		} else {
+			job.restart();
+		}
+		lock.unlock();
+		//TimeUnit.SECONDS.sleep(10L);
+
+		Long times = 1533713160000L;
+
+		HazelcastInstance instance = jet.getHazelcastInstance();
+		BlockingQueue<MetricVo> queue = instance.getQueue("Queue");
+
+		for (int k = 0; k < 10; k++) {
+			times = times + k * 5000L;
+			for (int i = 0; i < 10000; i++) {
+				for (int j = 0; j < 5; j++) {
+					MetricVo metricVo = new MetricVo();
+					metricVo.setMetricId((long) i);
+					metricVo.setMetricValue((long) i + j);
+					metricVo.setGenerateTime(times + j * 1000);
+					logger.info("id:{},time:{},value:{}", metricVo.getMetricId(), DateFormatUtils.format(metricVo.getGenerateTime(), "yyyy-MM-dd HH:mm:ss"), metricVo.getMetricValue());
+					//map.set(metricVo.getMetricId(), metricVo);
+					queue.put(metricVo);
+				}
+				//TimeUnit.SECONDS.sleep(5L);
+
+			}
+		}
+
+		while (true) {
+			SECONDS.sleep(10L);
+		}
+	}
 
 	@Test
 	public void testClientAndServer() throws InterruptedException {
@@ -52,7 +266,7 @@ public class TestJetMapJournal {
 		config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 		config.setSnapshotIntervalMillis(5000);
 
-		Job job = client.newJob(buildPipeline(),config);
+		Job job = client.newJob(buildPipeline(), config);
 
 
 		IMapJet<Long, MetricVo> map = jetInstance1.getMap(IN_MAP_NAME);
@@ -66,15 +280,15 @@ public class TestJetMapJournal {
 			TimeUnit.SECONDS.sleep(3L);
 		}*/
 		Long time = System.currentTimeMillis();
-		for(int i=0;i<1000;i++){
-			time += i*1000;
+		for (int i = 0; i < 1000; i++) {
+			time += i * 1000;
 			MetricVo metricVo = new MetricVo();
 			metricVo.setMetricId((long) i);
 			metricVo.setMetricValue((long) i);
 			metricVo.setGenerateTime(time);
-			map.set(metricVo.getMetricId(),metricVo);
+			map.set(metricVo.getMetricId(), metricVo);
 		}
-		TimeUnit.SECONDS.sleep(5L);
+		SECONDS.sleep(5L);
 		jetInstance2.shutdown();
 	}
 
@@ -85,10 +299,10 @@ public class TestJetMapJournal {
 		config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 		config.setSnapshotIntervalMillis(5000);
 		config.setAutoRestartOnMemberFailure(true);
-		Job job = client.newJob(buildPipeline(),config);
+		Job job = client.newJob(buildPipeline(), config);
 
-		while(true){
-			TimeUnit.SECONDS.sleep(3L);
+		while (true) {
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -96,22 +310,22 @@ public class TestJetMapJournal {
 	public void satrtJetServer() throws InterruptedException {
 		JetInstance jet = createNode();
 		Job job = jet.getJob("Test");
-		if(job == null){
+		if (job == null) {
 			JetInstance client = Jet.newJetClient();
 			JobConfig config = new JobConfig();
 			config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 			config.setSnapshotIntervalMillis(5000);
 			config.setAutoRestartOnMemberFailure(true);
 			config.setName("Test");
-			job = client.newJob(buildPipeline(),config);
-		}else{
+			job = client.newJob(buildPipeline(), config);
+		} else {
 			job.restart();
 		}
 		//TimeUnit.SECONDS.sleep(20L);
 		//putData(jet);
 
-		while(true){
-			TimeUnit.SECONDS.sleep(3L);
+		while (true) {
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -119,18 +333,18 @@ public class TestJetMapJournal {
 	public void putData() throws InterruptedException {
 		JetInstance jet = createNode();
 		Job job = jet.getJob("Test");
-		if(job == null){
+		if (job == null) {
 			JetInstance client = Jet.newJetClient();
 			JobConfig config = new JobConfig();
 			config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 			config.setSnapshotIntervalMillis(5000);
 			config.setAutoRestartOnMemberFailure(true);
 			config.setName("Test");
-			job = client.newJob(buildPipeline(),config);
-		}else{
+			job = client.newJob(buildPipeline(), config);
+		} else {
 			job.restart();
 		}
-		TimeUnit.SECONDS.sleep(10L);
+		SECONDS.sleep(10L);
 		System.out.println("Start put Data");
 		IMapJet<Long, MetricVo> map = jet.getMap(IN_MAP_NAME);
 		/*for (int i = 0; i < 1000; i++) {
@@ -143,18 +357,18 @@ public class TestJetMapJournal {
 			TimeUnit.SECONDS.sleep(3L);
 		}*/
 		Long time = System.currentTimeMillis();
-		for(int i=0;i<1000;i++){
-			time += i*1000;
+		for (int i = 0; i < 1000; i++) {
+			time += i * 1000;
 			MetricVo metricVo = new MetricVo();
 			metricVo.setMetricId((long) i);
 			metricVo.setMetricValue((long) i);
 			metricVo.setGenerateTime(time);
-			map.set(metricVo.getMetricId(),metricVo);
+			map.set(metricVo.getMetricId(), metricVo);
 		}
-		TimeUnit.SECONDS.sleep(5L);
+		SECONDS.sleep(5L);
 
 		while (true) {
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -170,22 +384,20 @@ public class TestJetMapJournal {
 			TimeUnit.SECONDS.sleep(3L);
 		}*/
 		Long time = System.currentTimeMillis();
-		for(int i=0;i<1000;i++){
-			time += i*1000;
+		for (int i = 0; i < 1000; i++) {
+			time += i * 1000;
 			MetricVo metricVo = new MetricVo();
 			metricVo.setMetricId((long) i);
 			metricVo.setMetricValue((long) i);
 			metricVo.setGenerateTime(time);
-			map.set(metricVo.getMetricId(),metricVo);
+			map.set(metricVo.getMetricId(), metricVo);
 		}
-		TimeUnit.SECONDS.sleep(5L);
+		SECONDS.sleep(5L);
 
 		while (true) {
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 		}
 	}
-
-
 
 
 	@Test
@@ -193,20 +405,20 @@ public class TestJetMapJournal {
 
 		JetInstance jet = Jet.newJetInstance(getJetConfig());
 		Job job = jet.getJob("Test");
-		if(job == null){
+		if (job == null) {
 			JetInstance client = Jet.newJetClient();
 			JobConfig config = new JobConfig();
 			config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 			config.setSnapshotIntervalMillis(5000);
 			config.setAutoRestartOnMemberFailure(true);
 			config.setName("Test");
-			job = client.newJob(buildPipeline(),config);
-		}else{
+			job = client.newJob(buildPipeline(), config);
+		} else {
 			job.restart();
 		}
 
 		while (true) {
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -215,36 +427,36 @@ public class TestJetMapJournal {
 	public void startMultiHazelCast2() throws InterruptedException {
 		JetInstance jet = Jet.newJetInstance(getJetConfig());
 		Job job = jet.getJob("Test");
-		if(job == null){
+		if (job == null) {
 			JetInstance client = Jet.newJetClient();
 			JobConfig config = new JobConfig();
 			config.setProcessingGuarantee(ProcessingGuarantee.NONE);
 			config.setSnapshotIntervalMillis(5000);
 			config.setAutoRestartOnMemberFailure(true);
 			config.setName("Test");
-			job = client.newJob(buildPipeline(),config);
-		}else{
+			job = client.newJob(buildPipeline(), config);
+		} else {
 			job.restart();
 		}
 
-		TimeUnit.SECONDS.sleep(20L);
+		SECONDS.sleep(20L);
 
 
 		IMapJet<Long, MetricVo> map = jet.getMap(IN_MAP_NAME);
 
 		Long time = System.currentTimeMillis();
-		for(int i=0;i<1000;i++){
-			time += i*1000;
+		for (int i = 0; i < 1000; i++) {
+			time += i * 1000;
 			MetricVo metricVo = new MetricVo();
 			metricVo.setMetricId((long) i);
 			metricVo.setMetricValue((long) i);
 			metricVo.setGenerateTime(time);
-			map.set(metricVo.getMetricId(),metricVo);
+			map.set(metricVo.getMetricId(), metricVo);
 		}
-		TimeUnit.SECONDS.sleep(5L);
+		SECONDS.sleep(5L);
 
 		while (true) {
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -289,7 +501,7 @@ public class TestJetMapJournal {
 
 
 		while (true) {
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 		}
 	}
 
@@ -306,9 +518,9 @@ public class TestJetMapJournal {
 				metricVo.setGenerateTime(System.currentTimeMillis());
 				map.set(metricVo.getMetricId(), metricVo);
 				System.out.println(DateFormatUtils.format(metricVo.getGenerateTime(), "yyyy-MM-dd HH:mm:ss"));
-				TimeUnit.SECONDS.sleep(3L);
+				SECONDS.sleep(3L);
 			}
-			TimeUnit.SECONDS.sleep(5L);
+			SECONDS.sleep(5L);
 		} finally {
 			jet.shutdown();
 		}
@@ -328,7 +540,7 @@ public class TestJetMapJournal {
 			} finally {
 				jet.shutdown();
 			}
-			TimeUnit.SECONDS.sleep(3L);
+			SECONDS.sleep(3L);
 
 		}
 	}
@@ -343,7 +555,7 @@ public class TestJetMapJournal {
 				IMapJet map = jet.getMap(OUT_MAP_NAME);
 				map.forEach((k, v) -> System.out.println(v));
 				System.out.println("test end");
-				TimeUnit.SECONDS.sleep(2L);
+				SECONDS.sleep(2L);
 			}
 		} finally {
 			jet.shutdown();
@@ -360,7 +572,7 @@ public class TestJetMapJournal {
 				IList list = jet.getList(OUT_MAP_NAME);
 				list.forEach(System.out::println);
 				System.out.println("test end");
-				TimeUnit.SECONDS.sleep(2L);
+				SECONDS.sleep(2L);
 			}
 		} finally {
 			jet.shutdown();
@@ -379,9 +591,10 @@ public class TestJetMapJournal {
 				//.aggregate(AggregateOperations.averagingDouble(MetricVo::getMetricValue))
 				//.drainTo(Sinks.map(OUT_MAP_NAME));
 				//.drainTo(Sinks.list(OUT_MAP_NAME));
-				//.drainTo(Sinks.logger((TimestampedEntry<Long, MetricResultVo> t) -> t.getValue().toString()));
-				.drainTo(Sinks.logger());
-				//.drainTo(getCustomSink());
+				//.drainTo(Sinks.logger((TimestampedEntry<Long, MetricResultVo> t) -> t.toString()));
+				.drainTo(Sinks.files("F:\\Techsure\\ts-metric\\data"));
+		//.drainTo(Sinks.logger());
+		//.drainTo(getCustomSink());
 		//.drainTo(Sinks.builder(DistributedFunction.identity()).onReceiveFn((DistributedBiConsumer<JetInstance, Object>) (jetInstance, o) -> System.out.println(o)).build());
 		return p;
 
@@ -392,14 +605,14 @@ public class TestJetMapJournal {
 		cfg.getHazelcastConfig()
 				.getMapEventJournalConfig(IN_MAP_NAME)
 				.setEnabled(true)
-				.setCapacity(1000)
-				.setTimeToLiveSeconds(0)
+				.setCapacity(100000)
+				.setTimeToLiveSeconds(30)
 
 		;
 		return cfg;
 	}
 
-	private static JetInstance createNode(){
+	private static JetInstance createNode() {
 		JetConfig config = new JetConfig();
 
 		EventJournalConfig journalConfig = new EventJournalConfig()
@@ -448,8 +661,6 @@ public class TestJetMapJournal {
 				.withCreate(MetricAccumulator::new)
 				//.andAccumulate((MetricAccumulator m, T item) -> m.accumulate(getDoubleValueFn.applyAsDouble(item)))
 				.andAccumulate((MetricAccumulator metricAccumulator, T o) -> metricAccumulator.accumulate(getDoubleValueFn.applyAsDouble(o)))
-				.andCombine(MetricAccumulator::combine)
-				.andDeduct(MetricAccumulator::deduct)
 				.andFinish(MetricAccumulator::finish);
 	}
 }
@@ -464,7 +675,6 @@ class MetricAccumulator implements Serializable {
 
 	public MetricAccumulator accumulate(double value) {
 		metricValueList.add(value);
-		//System.out.println("accumulate");
 		return this;
 	}
 
@@ -484,12 +694,8 @@ class MetricAccumulator implements Serializable {
 
 	public MetricResultVo finish() {
 		metricResultVo = new MetricResultVo();
-		metricResultVo.setValueList(metricValueList);
-		metricResultVo.setMaxValue(100.0);
-		metricResultVo.setMinValue(50.0);
-		metricResultVo.setPer5Value(51.5);
-		metricResultVo.setPer50Value(75.9);
-		metricResultVo.setPer95Value(88.8);
+
+		metricResultVo.setValueList(this.metricValueList);
 		//System.out.println(metricResultVo.toString());
 		return metricResultVo;
 	}
@@ -503,6 +709,7 @@ class MetricResultVo implements Serializable {
 	private Double per50Value;
 	private Double per95Value;
 	private List<Double> valueList;
+	private Integer listCount;
 
 	public Double getMinValue() {
 		return minValue;
@@ -552,17 +759,19 @@ class MetricResultVo implements Serializable {
 		this.valueList = valueList;
 	}
 
+	public Integer getListCount() {
+		return listCount;
+	}
+
+	public void setListCount(Integer listCount) {
+		this.listCount = listCount;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder listSb = new StringBuilder();
 		valueList.forEach(e -> listSb.append(e.doubleValue()).append(";"));
-		return "time:" + DateFormatUtils.format(new Date(), "yyyy-MM-dd HH:mm:ss")
-				+ "\nmaxValue:" + maxValue
-				+ "\nminValue:" + minValue
-				+ "\nper5Value" + per5Value
-				+ "\nper50Value" + per50Value
-				+ "\nper95Value" + per95Value
-				+ "\nlist:" + listSb.toString();
+		return "count:" + valueList.size() + "   list:" + listSb.toString() + "";
 	}
 }
 

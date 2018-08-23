@@ -1,19 +1,27 @@
 package com.techsure.strange.file;
 
-import java.io.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * @author zhoujian
- * @Date 2018/7/30 15:52
+ * @Date 2018/8/20 21:36
  */
-public class JetWindowNumCountTest {
-	public static void main(String[] args) {
+public class FileTest {
+	private static final Logger logger = LoggerFactory.getLogger(FileTest.class);
+
+	public void test(){
 		Integer totalCount = 0;
 		//File file = new File("G:\\Data\\jet\\test\\0");
 		//File file = new File("F:\\Techsure\\ts-metric\\30data\\1");
-		File file = new File("F:\\Techsure\\ts-metric\\data\\0");
+		File file = new File("E:\\Data\\project\\ts-metric\\0");
 		if (file.exists()) {
 			try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 				String tempString = null;
@@ -33,7 +41,7 @@ public class JetWindowNumCountTest {
 		System.out.println(totalCount);
 	}
 
-	private static String getLineDesc(String lineString) {
+	private String getLineDesc(String lineString) {
 		String regex = ".*ts=(.*),.*key=\'([0-9]*)\'.*num=([0-9]*).*";
 		Pattern pattern = Pattern.compile(regex);
 		String lineDesc = "";
@@ -44,7 +52,7 @@ public class JetWindowNumCountTest {
 		return lineDesc;
 	}
 
-	private static Integer getNumInLine(String lineString) {
+	private Integer getNumInLine(String lineString) {
 		String regex = ".*num=([0-9]*).*";
 		Pattern pattern = Pattern.compile(regex);
 		String num = "";

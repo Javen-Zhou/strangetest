@@ -11,8 +11,11 @@ import java.util.concurrent.BlockingQueue;
  * @Date 2018/8/6 18:39
  */
 public class InstanceA {
+	private static HazelcastInstance instance;
 	public static void main(String[] args) throws InterruptedException {
-		HazelcastInstance instance = Hazelcast.newHazelcastInstance();
+		HazelcastInstance instance = getInstance();
+		String path = Class.class.getClass().getResource("/").getPath();
+		String path2 = System.getProperty("user.dir");
 		BlockingQueue<String> queue = instance.getQueue("TestQueue");
 
 		String str = "";
@@ -23,5 +26,12 @@ public class InstanceA {
 				System.out.println("Instance A:" + str);
 			}
 		}
+	}
+
+	private static HazelcastInstance getInstance(){
+		if(instance == null){
+			instance = Hazelcast.newHazelcastInstance();
+		}
+		return instance;
 	}
 }
