@@ -26,6 +26,27 @@ public class StoreQueue {
 	private static final Logger logger = LoggerFactory.getLogger(StoreQueue.class);
 
 	@Test
+	public void testLotQueue() throws InterruptedException {
+		SingleChronicleQueue queue;
+		String path = "queue/";
+		for (int i = 0; i < 100; i++) {
+			path = "queue/" + i;
+			queue = SingleChronicleQueueBuilder.binary(path).rollCycle(RollCycles.MINUTELY).build();
+			ExcerptAppender appender = queue.acquireAppender();
+			appender.writeText("test" + i);
+
+		}
+
+		queue = SingleChronicleQueueBuilder.binary("queue/55").rollCycle(RollCycles.MINUTELY).build();
+		ExcerptTailer tailer  = queue.createTailer();
+		String text;
+
+		while ((text = tailer.readText()) != null) {
+			logger.info(text);
+		}
+	}
+
+	@Test
 	public void intPut() throws InterruptedException {
 		String path = "queue";
 		SingleChronicleQueue queue = SingleChronicleQueueBuilder.binary(path).rollCycle(SelfRollCyle.FIVE_MINUTE).build();

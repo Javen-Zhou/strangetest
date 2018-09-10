@@ -23,6 +23,12 @@ public class TimeTest {
 	private static final Logger logger = LoggerFactory.getLogger(TimeTest.class);
 
 	@Test
+	public void testTime(){
+		Long time = 1536019200000L % TimeUnit.HOURS.toMillis(8);
+		logger.info(String.valueOf(time));
+	}
+
+	@Test
 	public void testTimeZone() throws ParseException {
 		ZoneId zoneId = ZoneId.of("UTC");
 		Long time = 1534377884000L;

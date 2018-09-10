@@ -29,6 +29,16 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-cassandra</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>metrics-core</artifactId>
+                    <groupId>io.dropwizard.metrics</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -99,6 +109,11 @@
             <groupId>net.openhft</groupId>
             <artifactId>chronicle-queue</artifactId>
             <version>4.6.78-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.phantomthief</groupId>
+            <artifactId>more-collectors</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

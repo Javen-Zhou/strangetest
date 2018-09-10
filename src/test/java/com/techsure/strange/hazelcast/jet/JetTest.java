@@ -111,9 +111,19 @@ public class JetTest {
 				metricVo.setMetricValue((long) i);
 				metricVo.setGenerateTime(time + i * 1000);
 				map.set(metricVo.getMetricId(), metricVo);
+				TimeUnit.SECONDS.sleep(1L);
 				//logger.info("timestamp:{}", DateFormatUtils.format(metricVo.getGenerateTime(), "yyyy-MM-dd HH:mm:ss"));
 			}
 
+			for (int i = 0; i < 100; i++) {
+				MetricVo metricVo = new MetricVo();
+				metricVo.setMetricId(111L);
+				metricVo.setMetricValue((long) i);
+				metricVo.setGenerateTime(time + i * 1000);
+				map.set(metricVo.getMetricId(), metricVo);
+				TimeUnit.SECONDS.sleep(1L);
+				//logger.info("timestamp:{}", DateFormatUtils.format(metricVo.getGenerateTime(), "yyyy-MM-dd HH:mm:ss"));
+			}
 
 			logger.info("consume time:{}", System.currentTimeMillis() - begin);
 		} catch (Exception e) {
@@ -183,8 +193,8 @@ public class JetTest {
 	private static Pipeline buildPipeline() {
 		Pipeline p = Pipeline.create();
 		p.drawFrom(Sources.<MetricVo, Long, MetricVo>mapJournal(IN_MAP_NAME, mapPutEvents(), mapEventNewValue(), START_FROM_OLDEST))
-				.addTimestamps(MetricVo::getGenerateTime, 0)
-				.window(WindowDefinition.tumbling(30000))
+				.addTimestamps()
+				.window(WindowDefinition.tumbling(5000))
 				.groupingKey(MetricVo::getMetricId)
 				//.aggregate(caculateMetric(metricVo -> metricVo.getMetricValue()))
 				//.aggregate(caculateMetric(MetricVo::getMetricValue))

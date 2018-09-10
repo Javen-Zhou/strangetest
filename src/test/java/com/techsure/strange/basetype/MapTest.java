@@ -17,9 +17,11 @@ public class MapTest {
 	@Test
 	public void testMap() {
 		Map<String, String> map = new HashMap<>(10);
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 1; i++) {
 			map.put(String.valueOf(i), String.valueOf(i));
 		}
 		logger.info(String.valueOf(map.size()));
+		logger.info((String) map.values().toArray()[0]);
+
 	}
 }
