@@ -1,6 +1,7 @@
 package com.techsure.strange.threadpool;
 
 import com.techsure.strange.util.ThreadPool;
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +38,6 @@ public class ThreadPoolTest {
 		return thread;
 	}, new ThreadPoolExecutor.DiscardOldestPolicy());
 
-
 	@Test
 	public void testThreadPool1() throws InterruptedException {
 		for (int i = 0; i < 25; i++) {
@@ -51,10 +51,9 @@ public class ThreadPoolTest {
 				}
 			});
 			System.out.println("线程池中活跃的线程数： " + threadPool1.getPoolSize());
-			            if (queue.size() > 0)
-				            {
-				                System.out.println("----------------队列中阻塞的线程数" + queue.size());
-				            }
+			if (queue.size() > 0) {
+				System.out.println("----------------队列中阻塞的线程数" + queue.size());
+			}
 		}
 
 		while (true) {
