@@ -23,10 +23,8 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.lang.NonNull;
 
 import java.io.Serializable;
-import java.sql.Time;
 import java.util.*;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -655,8 +653,7 @@ public class TestJetMapJournal {
 		}).build();
 	}
 
-	@NonNull
-	private static <T> AggregateOperation1<T, MetricAccumulator, MetricResultVo> caculateMetric(@NonNull DistributedToDoubleFunction<? super T> getDoubleValueFn) {
+	private static <T> AggregateOperation1<T, MetricAccumulator, MetricResultVo> caculateMetric( DistributedToDoubleFunction<? super T> getDoubleValueFn) {
 		return AggregateOperation
 				.withCreate(MetricAccumulator::new)
 				//.andAccumulate((MetricAccumulator m, T item) -> m.accumulate(getDoubleValueFn.applyAsDouble(item)))
