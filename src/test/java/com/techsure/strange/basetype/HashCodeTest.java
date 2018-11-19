@@ -25,4 +25,14 @@ public class HashCodeTest {
 		logger.info(String.valueOf(place));
 	}
 
+	@Test
+	public void testHash() {
+		String s1 = "test1";
+		String s2 = "test2";
+
+		logger.info(String.valueOf(s1.hashCode()));
+		logger.info(String.valueOf(s2.hashCode()));
+
+	}
+
 }

@@ -14,6 +14,19 @@ public class StringTest {
 	private static final Logger logger = LoggerFactory.getLogger(StringTest.class);
 
 	@Test
+	public void testAddress(){
+		{
+			String s = "a word";
+			logger.info(String.valueOf(s.hashCode()));
+		}
+
+		{
+			String s2 = "a word";
+			logger.info(String.valueOf(s2.hashCode()));
+		}
+	}
+
+	@Test
 	public void test1() {
 		logger.info(String.valueOf(2 << 10));
 		logger.info(String.valueOf(Maths.nextPower2(2<<10, 8)));
