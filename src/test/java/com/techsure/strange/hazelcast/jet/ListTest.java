@@ -71,10 +71,10 @@ public class ListTest {
 	public void createJob(Long time) {
 		JobConfig jobConfig = new JobConfig();
 		jobConfig.setName("oneHourJob");
-		jet.newJob(buildPipeline(time), jobConfig).join();
+		//jet.newJob(buildPipeline(time), jobConfig).join();
 	}
 
-	Pipeline buildPipeline(Long time) {
+	/*Pipeline buildPipeline(Long time) {
 		Pipeline p = Pipeline.create();
 		p.drawFrom(Sources.<RollupVo>list("fiveMinuteDataList"))
 				.groupingKey(RollupVo::getMetricId)
@@ -82,8 +82,8 @@ public class ListTest {
 				.drainTo(createListCustomSink(time));
 		return p;
 	}
-
-	Sink<Map.Entry<String, RollupVo>> createListCustomSink(Long time) {
+*/
+	/*Sink<Map.Entry<String, RollupVo>> createListCustomSink(Long time) {
 		return Sinks
 				.<Logger, Map.Entry<String, RollupVo>>builder(jetInstance -> LoggerFactory.getLogger(JetJobUtils.class))
 				.onReceiveFn((Logger logger, Map.Entry<String, RollupVo> result) -> {
@@ -93,7 +93,7 @@ public class ListTest {
 					DataQueue.put(result.getValue());
 				})
 				.build();
-	}
+	}*/
 
 	@Test
 	public void testList() {

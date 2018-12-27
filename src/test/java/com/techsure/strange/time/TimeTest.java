@@ -23,7 +23,53 @@ public class TimeTest {
 	private static final Logger logger = LoggerFactory.getLogger(TimeTest.class);
 
 	@Test
-	public void testTime(){
+	public void testGetEightHourFolderName() throws ParseException {
+		String str = "2018-12-17 24:00:00";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = sdf.parse(str);
+		long time = date.getTime();
+
+
+		Calendar c = Calendar.getInstance();
+		c.setTimeInMillis(time - TimeUnit.HOURS.toMillis(8));
+		Integer day = c.get(Calendar.DAY_OF_WEEK);
+		logger.info(day - 1 + "");
+	}
+
+	@Test
+	public void testPdOneDay() throws ParseException {
+		String str = "2018-12-17 8:00:00";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = sdf.parse(str);
+		long time = date.getTime();
+
+		logger.info((time + TimeUnit.HOURS.toMillis(8)) % TimeUnit.DAYS.toMillis(1) == 0 ? "yes" : "no");
+	}
+
+	@Test
+	public void testGetClosestFiveMinute() throws ParseException {
+
+		Long ctime = getTime("2018-12-10 17:59:00", "yyyy-MM-dd HH:mm:ss");
+		Long nextTime = getClosestFiveMinute(ctime);
+		logger.info(DateFormatUtils.format(nextTime, "yyyy-MM-dd HH:mm:ss"));
+	}
+
+	private Long getClosestFiveMinute(Long ctime) {
+		return ctime / TimeUnit.MINUTES.toMillis(5) * TimeUnit.MINUTES.toMillis(5) + TimeUnit.MINUTES.toMillis(5);
+	}
+
+	private Long getTime(String dateStr, String formatStr) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+		return sdf.parse(dateStr).getTime();
+	}
+
+	@Test
+	public void testMill() {
+		logger.info(TimeUnit.SECONDS.toMillis(60) + "");
+	}
+
+	@Test
+	public void testTime() {
 		Long time = 1536019200000L % TimeUnit.HOURS.toMillis(8);
 		logger.info(String.valueOf(time));
 	}

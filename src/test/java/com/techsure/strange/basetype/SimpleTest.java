@@ -12,6 +12,22 @@ public class SimpleTest {
 	private static final Logger logger = LoggerFactory.getLogger(SimpleTest.class);
 
 	@Test
+	public void testError(){
+		try {
+			for (int i = 0; i < 10; i++) {
+				if (i == 5) {
+					throw new RuntimeException("ERROR TEST");
+
+				} else {
+					logger.info(i + "");
+				}
+			}
+		}catch (Exception e){
+			logger.error(e.getMessage(),e);
+		}
+	}
+
+	@Test
 	public void testBool(){
 		if(!true && true){
 			logger.info("true");

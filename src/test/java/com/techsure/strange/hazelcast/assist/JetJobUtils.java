@@ -20,7 +20,7 @@ public class JetJobUtils {
 		return AggregateOperation
 				.withCreate(MetricAccumulator::new)
 				.andAccumulate((DistributedBiConsumer<MetricAccumulator, T>) MetricAccumulator::accumulate)
-				.andFinish(MetricAccumulator::finish);
+				.andExportFinish(MetricAccumulator::export);
 	}
 
 }

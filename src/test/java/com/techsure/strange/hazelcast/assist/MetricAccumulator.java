@@ -53,12 +53,16 @@ public class MetricAccumulator implements Serializable {
 		return this;
 	}
 
+	public void finish(){
+
+	}
+
 	/**
 	 * 时间窗口结束，计算归档数据并返回
 	 *
 	 * @return 归档数据
 	 */
-	public RollupVo finish() {
+	public RollupVo export() {
 
 		RollupVo rollupVo = new RollupVo();
 		rollupVo.setDataType(dataType);

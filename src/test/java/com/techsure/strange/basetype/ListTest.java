@@ -46,4 +46,37 @@ public class ListTest {
 		});
 		list.forEach(System.out::println);
 	}
+
+	@Test
+	public void testSubList() {
+		List<Integer> list = new ArrayList<>();
+		list.add(0);
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(6);
+		list.add(7);
+		list.add(8);
+		list.add(9);
+		List<Integer> copyList = list.subList(0, 4);
+		logger.info("list size is:{}",list.size());
+		list.forEach(e ->logger.info(e.toString()));
+		logger.info("=========================");
+		logger.info("subList size is {}",copyList.size());
+		copyList.forEach(e -> logger.info(e.toString()));
+
+
+		copyList.remove(0);
+		logger.info("========================");
+		logger.info("list size is {}",list.size());
+		list.forEach(e ->logger.info(e.toString()));
+		logger.info("========================");
+		logger.info("subList size is {}",copyList.size());
+		copyList.forEach(e -> logger.info(e.toString()));
+
+
+
+	}
 }

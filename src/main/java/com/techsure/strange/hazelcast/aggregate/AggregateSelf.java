@@ -38,6 +38,11 @@ public class AggregateSelf implements AggregateOperation {
 	}
 
 	@Override
+	public DistributedFunction exportFn() {
+		return null;
+	}
+
+	@Override
 	public DistributedFunction finishFn() {
 		return null;
 	}
@@ -48,14 +53,20 @@ public class AggregateSelf implements AggregateOperation {
 	}
 
 	@Override
-	public AggregateOperation1 withCombiningAccumulateFn(DistributedFunction getAccFn) {
+	public AggregateOperation withIdentityFinish() {
 		return null;
 	}
 
 	@Override
-	public AggregateOperation withFinishFn(DistributedFunction finishFn) {
+	public AggregateOperation andThen(DistributedFunction distributedFunction) {
 		return null;
 	}
+
+	@Override
+	public AggregateOperation1 withCombiningAccumulateFn(DistributedFunction getAccFn) {
+		return null;
+	}
+
 
 	@Override
 	public DistributedBiConsumer accumulateFn(int index) {

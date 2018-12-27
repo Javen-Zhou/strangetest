@@ -1,16 +1,11 @@
 package com.techsure.strange.hazelcast.jet;
 
-import com.hazelcast.core.IMap;
 import com.hazelcast.jet.IMapJet;
 import com.hazelcast.jet.Jet;
 import com.hazelcast.jet.JetInstance;
-import com.hazelcast.jet.Job;
-import com.hazelcast.jet.aggregate.AggregateOperation1;
 import com.hazelcast.jet.aggregate.AggregateOperations;
 import com.hazelcast.jet.config.JetConfig;
-import com.hazelcast.jet.config.JobConfig;
 import com.hazelcast.jet.pipeline.*;
-import com.hazelcast.jet.stream.DistributedStream;
 import org.junit.Test;
 
 import java.io.Serializable;
@@ -21,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.hazelcast.jet.Util.mapEventNewValue;
 import static com.hazelcast.jet.Util.mapPutEvents;
-import static com.hazelcast.jet.aggregate.AggregateOperations.counting;
 import static com.hazelcast.jet.pipeline.JournalInitialPosition.START_FROM_OLDEST;
 
 /**
@@ -80,9 +74,9 @@ public class TestJetAll {
 				map.set(i, i);
 			}
 
-			DistributedStream.fromMap(map)
+			/*DistributedStream.fromMap(map)
 					//.filter(e -> e.getValue() < 0)
-					.forEach(System.out::println);
+					.forEach(System.out::println);*/
 
 			TimeUnit.SECONDS.sleep(10);
 			List<Integer> list = jet.getList(SINK_LIST);
