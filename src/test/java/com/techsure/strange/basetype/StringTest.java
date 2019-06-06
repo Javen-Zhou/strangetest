@@ -14,6 +14,12 @@ public class StringTest {
 	private static final Logger logger = LoggerFactory.getLogger(StringTest.class);
 
 	@Test
+	public void testStrSplit(){
+		String[] arr = "metric.store".split(",");
+		logger.info(arr.length + "");
+	}
+
+	@Test
 	public void testAddress(){
 		{
 			String s = "a word";

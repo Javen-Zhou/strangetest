@@ -15,6 +15,15 @@ public class MapTest {
 	private static final Logger logger = LoggerFactory.getLogger(MapTest.class);
 
 	@Test
+	public void testGetOrDefault(){
+		Map<String,String> map = new HashMap<>();
+		map.put("default","default");
+		map.put("linux","linux");
+
+		logger.info(map.getOrDefault("li","default"));
+	}
+
+	@Test
 	public void testMap() {
 		Map<String, String> map = new HashMap<>(10);
 		for (int i = 0; i < 1; i++) {

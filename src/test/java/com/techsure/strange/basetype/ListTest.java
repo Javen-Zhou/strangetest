@@ -1,6 +1,5 @@
 package com.techsure.strange.basetype;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author zhoujian
@@ -16,6 +16,43 @@ import java.util.List;
  */
 public class ListTest {
 	private static final Logger logger = LoggerFactory.getLogger(ListTest.class);
+
+	@Test
+	public void testToString(){
+		List<Long> list = new ArrayList<>();
+		list.add(1L);
+		list.add(2L);
+		logger.info(list.toString());
+	}
+
+	@Test
+	public void testThreadList() throws InterruptedException {
+		List<TestVo> list = new ArrayList<>();
+		list.add(new TestVo().setName("test1").setAge(10).setAddress("固戍"));
+		list.add(new TestVo().setName("test2").setAge(11).setAddress("西乡"));
+		list.add(new TestVo().setName("test3").setAge(12).setAddress("平洲"));
+
+		post(list);
+		list = new ArrayList<>();
+
+		while (true) {
+			TimeUnit.SECONDS.sleep(5L);
+		}
+	}
+
+	private void post(List<TestVo> list){
+		Thread thread = new Thread(() -> {
+			try {
+				TimeUnit.SECONDS.sleep(2L);
+			} catch (InterruptedException e) {
+				logger.error(e.getMessage(), e);
+			}
+			for (TestVo testVo : list) {
+				logger.info(testVo.toString());
+			}
+		});
+		thread.start();
+	}
 
 	@Test
 	public void testOut() {
@@ -61,22 +98,65 @@ public class ListTest {
 		list.add(8);
 		list.add(9);
 		List<Integer> copyList = list.subList(0, 4);
-		logger.info("list size is:{}",list.size());
-		list.forEach(e ->logger.info(e.toString()));
+		logger.info("list size is:{}", list.size());
+		list.forEach(e -> logger.info(e.toString()));
 		logger.info("=========================");
-		logger.info("subList size is {}",copyList.size());
+		logger.info("subList size is {}", copyList.size());
 		copyList.forEach(e -> logger.info(e.toString()));
 
 
 		copyList.remove(0);
 		logger.info("========================");
-		logger.info("list size is {}",list.size());
-		list.forEach(e ->logger.info(e.toString()));
+		logger.info("list size is {}", list.size());
+		list.forEach(e -> logger.info(e.toString()));
 		logger.info("========================");
-		logger.info("subList size is {}",copyList.size());
+		logger.info("subList size is {}", copyList.size());
 		copyList.forEach(e -> logger.info(e.toString()));
 
 
+	}
+}
 
+class TestVo {
+	private String name;
+	private Integer age;
+	private String address;
+
+	public String getName() {
+		return name;
+	}
+
+	public TestVo setName(String name) {
+		this.name = name;
+		return this;
+
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public TestVo setAge(Integer age) {
+		this.age = age;
+		return this;
+
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public TestVo setAddress(String address) {
+		this.address = address;
+		return this;
+	}
+
+	@Override
+	public String toString() {
+		return "TestVo{" +
+				"name='" + name + '\'' +
+				", age=" + age +
+				", address='" + address + '\'' +
+				'}';
 	}
 }

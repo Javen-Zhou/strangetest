@@ -1,11 +1,12 @@
 package com.techsure.strange.threadpool;
 
-import com.techsure.strange.util.ThreadPool;
-import org.apache.commons.lang3.time.DateFormatUtils;
+import jnr.ffi.annotations.In;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
@@ -39,6 +40,29 @@ public class ThreadPoolTest {
 	}, new ThreadPoolExecutor.DiscardOldestPolicy());
 
 	@Test
+	public void testCallBack() throws ExecutionException, InterruptedException {
+		List<Future<Integer>> list = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			Future<Integer> f = threadPool1.submit(new SearchCallBack(i));
+			list.add(f);
+		}
+		int count = 0;
+		while (list.size() > 0) {
+			List<Future<Integer>> tmpList = new ArrayList<>();
+			for (Future<Integer> future : list) {
+				if (future.isDone()) {
+					count += future.get();
+				}else{
+					tmpList.add(future);
+				}
+			}
+			list = tmpList;
+		}
+
+		logger.info(String.valueOf(count));
+	}
+
+	@Test
 	public void testThreadPool1() throws InterruptedException {
 		for (int i = 0; i < 25; i++) {
 			final Integer num = i;
@@ -59,5 +83,21 @@ public class ThreadPoolTest {
 		while (true) {
 			TimeUnit.SECONDS.sleep(2L);
 		}
+	}
+}
+
+class SearchCallBack implements Callable<Integer> {
+
+	private Integer value;
+
+	public SearchCallBack(Integer value) {
+		this.value = value;
+	}
+
+	@Override
+	public Integer call() throws Exception {
+		TimeUnit.SECONDS.sleep(2);
+		System.out.println(value);
+		return value;
 	}
 }
