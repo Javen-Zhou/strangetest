@@ -20,10 +20,40 @@ public class JSONTest {
 	private static final Logger logger = LoggerFactory.getLogger(JSONTest.class);
 
 	@Test
-	public void toObjcet(){
+	public void testJSONArray() {
+		String jsonStr = "{  \n" +
+				"   \"def\":[  \n" +
+				"      {  \n" +
+				"         \"name\":\"custom_sql_1\",\n" +
+				"         \"sql\":\"abc\",\n" +
+				"         \"level\":\"1:Warning\",\n" +
+				"   \"cron\":\"1-2 * * * * ? *\",\n" +
+				"   \"actionIds\":[1,2],\n" +
+				"   \"recipients\":\"majr@techsure.com.cn\"\n" +
+				"      },\n" +
+				"       {  \n" +
+				"         \"name\":\"custom_sql_1\",\n" +
+				"         \"sql\":\"abc\",\n" +
+				"         \"level\":\"1:Warning\",\n" +
+				"   \"cron\":\"1-2 * * * * ? *\",\n" +
+				"   \"actionIds\":[1,2],\n" +
+				"   \"recipients\":\"majr@techsure.com.cn\"\n" +
+				"      }\n" +
+				"   ]\n" +
+				"}";
+		JSONObject obj = JSON.parseObject(jsonStr);
+		JSONArray actionIds = obj.getJSONArray("def").getJSONObject(0).getJSONArray("actionIds");
+		for (int i = 0; i < actionIds.size(); i++) {
+			logger.info("actionId:{}", actionIds.get(i));
+		}
+	}
+
+
+	@Test
+	public void toObjcet() {
 		String json = "{\"name\":\"testVo1Name\",\"values\":[[10,0],[20,1]]\"list\":[{\"value\":20,\"age\":18},{\"value\":22,\"age\":19}]}";
 		JSONObject data = JSONObject.parseObject(json);
-		TestVo1 testVo1 = JSON.toJavaObject(data,TestVo1.class);
+		TestVo1 testVo1 = JSON.toJavaObject(data, TestVo1.class);
 		logger.info("success");
 	}
 
@@ -42,7 +72,7 @@ public class JSONTest {
 	}
 }
 
-class TestVo1{
+class TestVo1 {
 	private String name;
 	private List<TestVo2> list;
 	private List<JSONArray> values;
@@ -71,7 +101,8 @@ class TestVo1{
 		this.list = list;
 	}
 }
-class TestVo2{
+
+class TestVo2 {
 	private String value;
 	private Integer age;
 

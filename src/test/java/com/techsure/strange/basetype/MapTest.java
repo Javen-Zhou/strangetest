@@ -18,14 +18,23 @@ public class MapTest {
 	private static final Logger logger = LoggerFactory.getLogger(MapTest.class);
 
 
+	@Test
+	public void testGetOrDefault2() {
+		Map<String, List<Integer>> map = new HashMap<>();
+		List<Integer> list = map.getOrDefault("key", new ArrayList<>());
+		map.putIfAbsent("key",list);
+		list.add(1);
+		list = map.get("key");
+		list.forEach(i -> logger.info("{}", i));
+	}
 
 	@Test
-	public void testComputeIfAbsent(){
-		Map<String,Integer> map = new HashMap<>();
+	public void testComputeIfAbsent() {
+		Map<String, Integer> map = new HashMap<>();
 		map.putIfAbsent("123", 1);
-		for(Map.Entry<String,Integer> entry:map.entrySet()){
+		for (Map.Entry<String, Integer> entry : map.entrySet()) {
 			logger.info(entry.getKey());
-			logger.info("{}",entry.getValue());
+			logger.info("{}", entry.getValue());
 		}
 	}
 
@@ -34,7 +43,7 @@ public class MapTest {
 		Map<String, List<Integer>> map = new HashMap<>();
 		List<Integer> list = map.getOrDefault("12", new ArrayList<>());
 		list.add(1);
-		map.put("12",list);
+		map.put("12", list);
 
 		for (Map.Entry<String, List<Integer>> entry : map.entrySet()) {
 			logger.info(entry.getKey());

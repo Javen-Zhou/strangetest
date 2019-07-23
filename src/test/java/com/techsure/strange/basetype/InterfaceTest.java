@@ -27,6 +27,8 @@ public  interface InterfaceTest<K,V> {
 	boolean containsKey(K key);
 
 	Object get(K key);
+
+
 }
 
 interface InterfaceTest2<K,V> extends InterfaceTest<K,V>{

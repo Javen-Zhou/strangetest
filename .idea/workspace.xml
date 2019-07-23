@@ -1,0 +1,1881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57b5b5c0-a5f4-47bd-bcca-d086f3f5de5a" name="Default" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/sell/log_error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/sell/log_info.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/queue/rollup/20180905-0850.cq4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/queue/rollup/directory-listing.cq4t" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Female.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/IPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Male.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/proxy/TestProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/strangetest.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/StrangeApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/abstracttest/AbstractFather.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/abstracttest/Son.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/breaktag/BreakTagTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/controller/TestApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/designmode/singlepattern/Singleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/designmode/singlepattern/Singleton2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/designmode/singlepattern/TestSingleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/extend/Test1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/extend/Test2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/extend/Test3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/file/JetWindowNumCountTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/FruitGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/Generator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/Generic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericFruit$Apple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericFruit$Fruit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericFruit$GenerateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericFruit$Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericFruit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericStaticTest$StaticTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/generic/GenericStaticTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/aggregate/AggregateSelf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/HelloWorld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/Test4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/TestJet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/TestJet2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/TestJet3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/TestJetConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/jet/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/queue/DistrbutedQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/queue/InstanceA.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/hazelcast/queue/InstanceB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/jisuanke/jumpgame/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Crei.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Crei2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Crei2Impl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Lambda2Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/LambdaAnotherTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/LambdaTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/PersonLambdaTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/PersonLambdaTest$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/PersonLambdaTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/PersonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Util$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/lambda/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/list/ListAddTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/list/SubListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/log/LoggerErrorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/log/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/metrics/TestGauges$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/metrics/TestGauges.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/metrics/TestMeters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/proxy/Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/proxy/Female.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/proxy/IPerson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/proxy/Male.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/proxy/ProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/ratelimiter/RateLimiterDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/simple/SimpleTest1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/simple/StaticMethodTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/simple/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/sort/ComparatorTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/sort/ComparatorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/timeunit/TimeUnitTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/tree/TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/tree/TreeRoot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/tree/TreeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/util/FileUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/util/Solution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/util/ThreadPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/techsure/strange/util/TreeNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/strange-test-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/strange-test-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/AutoCloseTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/BinaryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/CloneTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/ContrustorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/Course.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/DoubleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/EncodeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/HandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/HashCodeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/InterfaceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/InterfaceTest2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/JSONTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/ListTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/ListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/MapTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/MetricCollector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/OverrideHashcodeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/QueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/SetTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/SimpleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/StreamTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/StringTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/TestHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/TestVo1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/TestVo2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/basetype/UserVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/cassandra/session/CassandraSelfSession.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/cassandra/session/CassandraTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/ReadTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/ReadUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/RollCycleEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/SelfRollCyle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/StoreQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/chronicle/TopicEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/date/DateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/email/HtmlEmailTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/exercise/PatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/exercise/TimeExerciseTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/exercise/TimeVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/fastjson/JSONTEST.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/fastjson/TestVO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/file/FileOperateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/file/FileTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hash/Hash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hash/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hash/PersonTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/HazelcastTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/AttributeVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/CalculateUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/CalculateUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/CommonVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/DataTypeEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/JetJobUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/MetricAccumulator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/assist/RollupVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/AbstractDataQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/CacheTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/CapacityTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/CountEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/DataQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/JetQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/LateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/ListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/MapTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/TestJetAll.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/TestJetTimeWindowRound.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/jet/TestWindowVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/list/DestroyTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/list/ListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/lock/LockTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/lock/MapTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/hazelcast/queue/QueuePollTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/leetcode/KeepCitySkyLine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/leetcode/ReverseInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/leetcode/SoupServings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/leetcode/StringToInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/loop/LoopPlace.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/loop/LoopPlaceState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/loop/LoopTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/loop/LoopTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/loop/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/metrics/MeterTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/metrics/MetricsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netflix/ribbon/RuleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/ChronicleWriterUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/DataClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/DataClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/DataServerHandlerAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/DiscardServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/DiscardServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/NettyTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/RollUpTypeEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/netty/TransportVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/proxy/TestProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/quartz/QuartzTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/quartz/TestJob.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/regex/RegexTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/regex/RoundRegexTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/ConstructorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/DataVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/EnumTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/JSONTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/MapTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/StringWriterTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/SynchronizedTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/TestVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/simple/TimeDiffEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/techsure/Test1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/threadpool/AutomicTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/threadpool/SearchCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/threadpool/ThreadPoolTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/time/TimeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/techsure/strange/tree/SearchTreeUtilsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/InterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/InterfaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/MapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StringTest.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="strangetest" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/IPerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Dog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Male.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Female.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/InvocationHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/proxy/TestProxyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/list/ListAddTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sn</find>
+      <find>end</find>
+      <find>on</find>
+      <find>map</find>
+      <find>queue size</find>
+      <find>list size</find>
+      <find>list</find>
+      <find>D-Q</find>
+      <find>Timesta</find>
+      <find>HzJetInstance.getHzInstance()</find>
+      <find>consu</find>
+      <find>consume</find>
+      <find>sum</find>
+      <find>4950</find>
+      <find>session</find>
+      <find>groupingBy</find>
+      <find>toList</find>
+      <find>ScheduledThreadPoolExecutor</find>
+      <find>hr</find>
+      <find>getLineDesc</find>
+      <find>BufferedReader</find>
+      <find>plete</find>
+      <find>complete</find>
+      <find>all complete</find>
+      <find>set all complete</find>
+      <find>jet</find>
+      <find>Ribbon</find>
+      <find>File</find>
+      <find>[</find>
+      <find>location</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Hazelcast.newInstance()</replace>
+      <replace>{{</replace>
+      <replace>}}</replace>
+      <replace>{</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/hazelcast/aggregate/AggregateSelf.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/TestJetAll.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/assist/MetricAccumulator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/assist/JetJobUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/CapacityTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/SetTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/time/TimeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/SynchronizedTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/fastjson/JSONTEST.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/MapTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/EnumTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/SimpleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/simple/StaticMethodTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/JSONTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/file/JetWindowNumCountTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/KeepCitySkyLine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/SoupServings.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/ListTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/threadpool/ThreadPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/regex/RoundRegexTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TraverseUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeRoot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/SearchTreeUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/tree/SearchTreeUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/tree/Soluation.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/tree/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/util/Solution.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/quartz/TestJob.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/quartz/QuartzTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hash/PersonTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/hash/Person.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/ReverseInteger.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/StringToInteger.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/CloneTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/OverrideHashcodeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/InterfaceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/MapTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StringTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/IPerson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Male.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Female.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Dog.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/proxy/TestProxyFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1910" />
+    <option name="y" value="-10" />
+    <option name="width" value="2580" />
+    <option name="height" value="1410" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="strangetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strangetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="ListTest&#9;FILE&#9;file://F:/KeepHeart/strangetest/src/test/java/com/techsure/strange/basetype/ListTest.java&#10;Map&#9;FILE&#9;file://F:/KeepHeart/strangetest/src/test/java/com/techsure/strange/hazelcast/jet/MapTest.java&#10;Thread&#9;PSI&#9;JAVA://com.techsure.strange.util.ThreadPool&#10;TimeTest&#9;FILE&#9;file://F:/KeepHeart/strangetest/src/test/java/com/techsure/strange/time/TimeTest.java&#10;List&#9;FILE&#9;file://F:/KeepHeart/strangetest/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java&#10;Time&#9;FILE&#9;file://F:/KeepHeart/strangetest/src/test/java/com/techsure/strange/time/TimeTest.java&#10;Standardcopy&#9;PSI&#9;JAVA://java.nio.file.StandardCopyOption" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554307200540" />
+    <property name="last.edited.regexp" value="result:1" />
+    <property name="last_opened_file_path" value="D:/DevelopTools/JetBrains/IntelliJ IDEA 2018.2.4/lib/annotations.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.23908046" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.techsure.strange.cassandra.session" />
+      <recent name="com.techsure.strange.netty" />
+      <recent name="com.techsure.strange.chronicle" />
+      <recent name="com.techsure.strange.hazelcast.assist" />
+      <recent name="com.techsure.strange.loop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\KeepHeart\strangetest\src\test\java\com\techsure\strange\hazelcast\assist" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.JSONTest.testJSONArray">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InstanceA" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.hazelcast.queue.InstanceA" />
+      <module name="strangetest" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.hazelcast.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONTest.testJSONArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strangetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.basetype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techsure.strange.basetype" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.basetype.JSONTest" />
+      <option name="METHOD_NAME" value="testJSONArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTest.getStrLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strangetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.basetype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techsure.strange.basetype" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.basetype.StringTest" />
+      <option name="METHOD_NAME" value="getStrLength" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTest.testLsitToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strangetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.basetype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techsure.strange.basetype" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.basetype.StringTest" />
+      <option name="METHOD_NAME" value="testLsitToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTest.testThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strangetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.basetype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techsure.strange.basetype" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.basetype.StringTest" />
+      <option name="METHOD_NAME" value="testThread" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProxyFactory.testPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strangetest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techsure.strange.proxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techsure.strange.proxy" />
+      <option name="MAIN_CLASS_NAME" value="com.techsure.strange.proxy.TestProxyFactory" />
+      <option name="METHOD_NAME" value="testPerson" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="strangetest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.techsure.strange.StrangeApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.InstanceA" />
+      <item itemvalue="JUnit.StringTest.getStrLength" />
+      <item itemvalue="JUnit.StringTest.testLsitToString" />
+      <item itemvalue="JUnit.StringTest.testThread" />
+      <item itemvalue="JUnit.TestProxyFactory.testPerson" />
+      <item itemvalue="JUnit.JSONTest.testJSONArray" />
+      <item itemvalue="Spring Boot.StrangeApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JSONTest.testJSONArray" />
+        <item itemvalue="JUnit.TestProxyFactory.testPerson" />
+        <item itemvalue="JUnit.StringTest.testThread" />
+        <item itemvalue="JUnit.StringTest.testLsitToString" />
+        <item itemvalue="JUnit.StringTest.getStrLength" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57b5b5c0-a5f4-47bd-bcca-d086f3f5de5a" name="Default" comment="" />
+      <created>1533610506478</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533610506478</updated>
+      <workItem from="1533610508100" duration="8386000" />
+      <workItem from="1533624749891" duration="598000" />
+      <workItem from="1533627467288" duration="1486000" />
+      <workItem from="1533632224867" duration="113000" />
+      <workItem from="1533632366547" duration="628000" />
+      <workItem from="1533633601070" duration="3598000" />
+      <workItem from="1533692872140" duration="10162000" />
+      <workItem from="1533778755202" duration="7850000" />
+      <workItem from="1533806220000" duration="1195000" />
+      <workItem from="1533814798385" duration="5716000" />
+      <workItem from="1533865051322" duration="9795000" />
+      <workItem from="1534147736556" duration="6265000" />
+      <workItem from="1534210132533" duration="682000" />
+      <workItem from="1534298369736" duration="6750000" />
+      <workItem from="1534403578908" duration="11800000" />
+      <workItem from="1534470082949" duration="4867000" />
+      <workItem from="1534558409852" duration="1878000" />
+      <workItem from="1534658180829" duration="119000" />
+      <workItem from="1534660049597" duration="5940000" />
+      <workItem from="1534730403230" duration="13685000" />
+      <workItem from="1534815034187" duration="11657000" />
+      <workItem from="1534903899548" duration="597000" />
+      <workItem from="1534988500456" duration="10805000" />
+      <workItem from="1535075200127" duration="12881000" />
+      <workItem from="1535225176432" duration="2249000" />
+      <workItem from="1535263068690" duration="645000" />
+      <workItem from="1535264020614" duration="4115000" />
+      <workItem from="1535341774816" duration="2105000" />
+      <workItem from="1535352241204" duration="5139000" />
+      <workItem from="1535420129653" duration="8631000" />
+      <workItem from="1535506297726" duration="14798000" />
+      <workItem from="1535605089491" duration="7229000" />
+      <workItem from="1535680934507" duration="7186000" />
+      <workItem from="1535770858346" duration="3124000" />
+      <workItem from="1535869271235" duration="6818000" />
+      <workItem from="1535939636074" duration="6412000" />
+      <workItem from="1536026972496" duration="8216000" />
+      <workItem from="1536112283048" duration="14497000" />
+      <workItem from="1536205763835" duration="1028000" />
+      <workItem from="1536253422703" duration="664000" />
+      <workItem from="1536284733357" duration="1008000" />
+      <workItem from="1536570679089" duration="1776000" />
+      <workItem from="1536629646854" duration="3578000" />
+      <workItem from="1536673018168" duration="593000" />
+      <workItem from="1536673966374" duration="594000" />
+      <workItem from="1536722295391" duration="3055000" />
+      <workItem from="1536802707256" duration="1986000" />
+      <workItem from="1536889911494" duration="597000" />
+      <workItem from="1537254205872" duration="1858000" />
+      <workItem from="1537259660424" duration="611000" />
+      <workItem from="1537261234378" duration="204000" />
+      <workItem from="1538991254659" duration="629000" />
+      <workItem from="1539049382578" duration="599000" />
+      <workItem from="1539572302528" duration="3049000" />
+      <workItem from="1539654329258" duration="599000" />
+      <workItem from="1539741167856" duration="1290000" />
+      <workItem from="1539826948618" duration="616000" />
+      <workItem from="1539913474592" duration="2760000" />
+      <workItem from="1540172596534" duration="3334000" />
+      <workItem from="1540261439470" duration="596000" />
+      <workItem from="1540344861589" duration="767000" />
+      <workItem from="1540447756621" duration="2612000" />
+      <workItem from="1540519961002" duration="1863000" />
+      <workItem from="1540778166268" duration="3263000" />
+      <workItem from="1540793653777" duration="1829000" />
+      <workItem from="1540863702473" duration="1202000" />
+      <workItem from="1541040088903" duration="306000" />
+      <workItem from="1541040432695" duration="1421000" />
+      <workItem from="1541124429302" duration="2158000" />
+      <workItem from="1541382271787" duration="1214000" />
+      <workItem from="1541468318282" duration="599000" />
+      <workItem from="1541555823286" duration="597000" />
+      <workItem from="1541580474636" duration="594000" />
+      <workItem from="1541587512884" duration="598000" />
+      <workItem from="1541642254219" duration="597000" />
+      <workItem from="1541727002854" duration="599000" />
+      <workItem from="1541988103023" duration="592000" />
+      <workItem from="1541992802084" duration="1672000" />
+      <workItem from="1542093262238" duration="631000" />
+      <workItem from="1542166013500" duration="146000" />
+      <workItem from="1542269194840" duration="416000" />
+      <workItem from="1542614656102" duration="3439000" />
+      <workItem from="1542677873418" duration="2445000" />
+      <workItem from="1542712967921" duration="5606000" />
+      <workItem from="1542765192292" duration="3182000" />
+      <workItem from="1542853120875" duration="770000" />
+      <workItem from="1542872526618" duration="2065000" />
+      <workItem from="1542941031423" duration="599000" />
+      <workItem from="1542944633091" duration="1273000" />
+      <workItem from="1543027864335" duration="599000" />
+      <workItem from="1543196890140" duration="599000" />
+      <workItem from="1543283810471" duration="1994000" />
+      <workItem from="1543456222172" duration="1665000" />
+      <workItem from="1543539452198" duration="599000" />
+      <workItem from="1543801739593" duration="599000" />
+      <workItem from="1543887702576" duration="7229000" />
+      <workItem from="1543973562989" duration="14068000" />
+      <workItem from="1544061106370" duration="3064000" />
+      <workItem from="1544148513505" duration="599000" />
+      <workItem from="1544406118066" duration="3402000" />
+      <workItem from="1544497836443" duration="1958000" />
+      <workItem from="1544579079248" duration="1233000" />
+      <workItem from="1544665572970" duration="623000" />
+      <workItem from="1544752471926" duration="596000" />
+      <workItem from="1545010268175" duration="3305000" />
+      <workItem from="1545096365634" duration="4063000" />
+      <workItem from="1545183027770" duration="597000" />
+      <workItem from="1545305084514" duration="596000" />
+      <workItem from="1545793539142" duration="596000" />
+      <workItem from="1545879337582" duration="2297000" />
+      <workItem from="1545961060046" duration="596000" />
+      <workItem from="1546411086159" duration="1231000" />
+      <workItem from="1546480931858" duration="688000" />
+      <workItem from="1546566877112" duration="547000" />
+      <workItem from="1546931216830" duration="1354000" />
+      <workItem from="1547000865671" duration="1233000" />
+      <workItem from="1547087387265" duration="616000" />
+      <workItem from="1547171997569" duration="592000" />
+      <workItem from="1547215956385" duration="620000" />
+      <workItem from="1547430326971" duration="596000" />
+      <workItem from="1547519374314" duration="596000" />
+      <workItem from="1547622800171" duration="594000" />
+      <workItem from="1547689381258" duration="137000" />
+      <workItem from="1550998902536" duration="1853000" />
+      <workItem from="1551020302525" duration="915000" />
+      <workItem from="1551023800131" duration="585000" />
+      <workItem from="1551059822654" duration="599000" />
+      <workItem from="1551083567209" duration="1412000" />
+      <workItem from="1551319557573" duration="595000" />
+      <workItem from="1551679283795" duration="4907000" />
+      <workItem from="1552268970199" duration="596000" />
+      <workItem from="1552296904430" duration="1606000" />
+      <workItem from="1552727746865" duration="1987000" />
+      <workItem from="1553584820445" duration="1342000" />
+      <workItem from="1553744521030" duration="14396000" />
+      <workItem from="1553969796956" duration="598000" />
+      <workItem from="1554084553088" duration="5946000" />
+      <workItem from="1555309171800" duration="586000" />
+      <workItem from="1559716521718" duration="2127000" />
+      <workItem from="1559787097009" duration="7322000" />
+      <workItem from="1560130634925" duration="597000" />
+      <workItem from="1560827109283" duration="4009000" />
+      <workItem from="1560908527794" duration="13021000" />
+      <workItem from="1560994869157" duration="597000" />
+      <workItem from="1561082412199" duration="598000" />
+      <workItem from="1561341190355" duration="564000" />
+      <workItem from="1561342187570" duration="596000" />
+      <workItem from="1561426989135" duration="597000" />
+      <workItem from="1561445184366" duration="578000" />
+      <workItem from="1561512773589" duration="596000" />
+      <workItem from="1561601078227" duration="597000" />
+      <workItem from="1561686121294" duration="595000" />
+      <workItem from="1561791937935" duration="596000" />
+      <workItem from="1561945805226" duration="538000" />
+      <workItem from="1561952725643" duration="557000" />
+      <workItem from="1562032529451" duration="597000" />
+      <workItem from="1562117890073" duration="598000" />
+      <workItem from="1562119491189" duration="1972000" />
+      <workItem from="1562204729983" duration="597000" />
+      <workItem from="1562230997861" duration="596000" />
+      <workItem from="1562290808089" duration="593000" />
+      <workItem from="1562550742248" duration="590000" />
+      <workItem from="1562636274320" duration="3249000" />
+      <workItem from="1562723200416" duration="3097000" />
+      <workItem from="1562809756399" duration="3889000" />
+      <workItem from="1562895702422" duration="10821000" />
+      <workItem from="1563243743755" duration="1457000" />
+      <workItem from="1563327631207" duration="3028000" />
+      <workItem from="1563413664595" duration="596000" />
+      <workItem from="1563415246501" duration="565000" />
+      <workItem from="1563420528202" duration="587000" />
+      <workItem from="1563423249346" duration="572000" />
+      <workItem from="1563500376361" duration="2258000" />
+      <workItem from="1563759847893" duration="288000" />
+      <workItem from="1563761474728" duration="577000" />
+      <workItem from="1563779245940" duration="1367000" />
+      <workItem from="1563846148886" duration="896000" />
+      <workItem from="1563847680475" duration="237000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1535012705563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535012705563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1535465576495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1535465576495</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1536572682841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1536572682841</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <created>1536837544766</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1536837544766</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1541142701699</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541142701699</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit">
+      <created>1545905507932</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545905507932</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <created>1559787558116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559787558116</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1562835208108</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562835208108</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="StringTest_testThread - 2019.07.17 at 17h 18m 12s.xml">
+      <configuration name="StringTest.testThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringTest_testThread - 2019.07.17 at 17h 20m 35s.xml">
+      <configuration name="StringTest.testThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringTest_testThread - 2019.07.17 at 17h 20m 43s.xml">
+      <configuration name="StringTest.testThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 13m 07s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 13m 57s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 17m 12s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 17m 16s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 19m 59s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProxyFactory_testPerson - 2019.07.19 at 10h 20m 40s.xml">
+      <configuration name="TestProxyFactory.testPerson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JSONTest_testJSONArray - 2019.07.22 at 15h 32m 55s.xml">
+      <configuration name="JSONTest.testJSONArray" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="473412000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="2064" height="1128" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990619" visible="true" weight="0.21734795" />
+      <window_info id="Structure" order="1" weight="0.20628998" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50093806" side_tool="true" weight="0.27345845" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="JRebel" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7441406" weight="0.43373495" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49520257" weight="0.47082496" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32955536" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5053711" side_tool="true" weight="0.4714567" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4994664" weight="0.3253012" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Tail" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.50053304" side_tool="true" weight="0.2844734" />
+      <window_info anchor="bottom" id="Problems" order="17" />
+      <window_info anchor="bottom" id="Docker" order="18" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Log" order="19" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.2620064" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" x="682" y="409" width="555" height="211" id="Documentation" order="10" type="FLOATING" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="11" weight="0.41417912" />
+      <window_info anchor="right" id="Maven" order="12" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990619" visible="true" weight="0.29088473" />
+      <window_info id="Structure" order="1" weight="0.20628998" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50093806" side_tool="true" weight="0.27345845" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="JRebel" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31205675" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47517732" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32955536" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Tail" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.26206434" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" x="682" y="409" width="555" height="211" id="Documentation" order="10" type="FLOATING" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="11" weight="0.52077746" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/techsure/strange/hazelcast/queue/InstanceA.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/time/TimeTest.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/loop/LoopTest.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/loop/LoopTest.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/date/DateTest.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/jet/ListTest.java</url>
+          <line>131</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hazelcast/list/DestroyTest.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StreamTest.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/regex/RegexTest.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/email/HtmlEmailTest.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StringTest.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/exercise/TimeExerciseTest.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/MapTest.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/simple/MapTest.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/KeepCitySkyLine.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/SoupServings.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/threadpool/ThreadPoolTest.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/threadpool/ThreadPoolTest.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/regex/RoundRegexTest.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/StringToInteger.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/StringToInteger.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/StringToInteger.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/MapTest.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="target.getClass().getClassLoader()" />
+        <watch expression="target.getClass().getInterfaces()" />
+        <watch expression="args" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>DateFormatUtils.format(dayStartTime,&quot;yyyy-MM-dd HH:mm:ss&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>DateFormatUtils.format(currentTime,&quot;yyyy-MM-dd HH:mm:ss&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(activeTime % TimeUnit.HOURS.toMillis(1)) %TimeUnit.MINUTES.toMillis(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(activeTime % TimeUnit.HOURS.toMillis(1)) /TimeUnit.MINUTES.toMillis(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>activeTime % TimeUnit.HOURS.toMillis(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>activeTime / TimeUnit.HOURS.toMillis(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>DateFormatUtils.format(currentTime,&quot;yyyy-MM-dd HH:mm:ss&quot;);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Integer.valueOf(String.valueOf(c)) &lt; Integer.MIN_VALUE - result * 10</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/lambda/PersonService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/lambda/PersonLambdaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/simple/SimpleTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding>
+            <element signature="e#5351#5352#0" expanded="true" />
+            <element signature="e#5386#5387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/ratelimiter/RateLimiterDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/KeepCitySkyLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/SoupServings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/ListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/threadpool/ThreadPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7011">
+          <caret line="421" column="25" selection-start-line="421" selection-start-column="25" selection-end-line="421" selection-end-column="25" />
+          <folding>
+            <element signature="e#16338#16339#0" expanded="true" />
+            <element signature="e#16420#16421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/SimpleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/regex/RoundRegexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/SearchTreeUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/util/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2850">
+          <caret line="150" column="36" selection-start-line="150" selection-start-column="36" selection-end-line="150" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/quartz/TestJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/tree/TreeRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/tree/SearchTreeUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="420" column="5" selection-start-line="420" selection-start-column="5" selection-end-line="420" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/quartz/QuartzTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5784#5785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hash/PersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/hash/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/ReverseInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/leetcode/StringToInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="54" column="121" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/CloneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/OverrideHashcodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/InterfaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JetBrains/IntelliJ IDEA 2018.2.4/lib/annotations.jar!/org/jetbrains/annotations/Contract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/javax/swing/UIManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16663">
+          <caret line="986" column="25" selection-start-line="986" selection-start-column="25" selection-end-line="986" selection-end-column="25" />
+          <folding>
+            <element signature="e#38709#38710#0" expanded="true" />
+            <element signature="e#38761#38762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="267" column="31" selection-start-line="267" selection-start-column="31" selection-end-line="267" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/techsure/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/MapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/StringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/IPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Male.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/Female.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/proxy/ProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/InvocationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/proxy/TestProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techsure/strange/list/ListAddTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techsure/strange/basetype/JSONTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>strangetest</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23908046" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

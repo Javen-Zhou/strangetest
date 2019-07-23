@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+*.iml
+out
+gen
+
+
+logs
+queue
+target
+src/test/java/com/techsure/strange/thread/
+target/generated-sources/
+target/generated-test-sources/
