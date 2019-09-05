@@ -1,5 +1,6 @@
 package com.techsure.strange.basetype;
 
+import com.google.common.math.LongMath;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,31 @@ import java.util.*;
 public class DoubleTest {
 	private static final Logger logger = LoggerFactory.getLogger(DoubleTest.class);
 
+	@Test
+	public void testDecimal(){
+		Double res = BigDecimal.valueOf(3.0).divide(BigDecimal.valueOf(0),2,BigDecimal.ROUND_HALF_DOWN).doubleValue();
+		logger.info("{}",res);
+	}
+
+	@Test
+	public void testDivide(){
+		int res = 0;
+		Double num1 = 0d,num2=0d;
+		res += (int) Math.round(num1 / num2);
+		logger.info("result:{}",res);
+	}
+
+	@Test
+	public void testDouble(){
+		Double sum = 100d;
+		Integer size = 10;
+		logger.info("value:{}",sum / size);
+
+		Double total = 3.3d;
+		Double avg = 1.1d;
+		int num = (int)Math.round(total /avg);
+		logger.info("num:{}" ,num);
+	}
 
 	@Test
 	public void testSimple() {

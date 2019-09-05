@@ -1,12 +1,14 @@
 package com.techsure.strange.basetype;
 
 import net.openhft.chronicle.core.Maths;
+import net.sf.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +20,25 @@ public class StringTest {
 	private static final Logger logger = LoggerFactory.getLogger(StringTest.class);
 
 	private volatile Integer num = 0;
+
+	@Test
+	public void testSpilt(){
+		String test = "";
+		logger.info(String.valueOf(test.split(",").length));
+	}
+
+	@Test
+	public void testBlankSplit(){
+		JSONObject data = new JSONObject();
+		String test = data.optString("test","");
+		String[] strArr = test.split(",");
+		for(String level:strArr){
+			if(StringUtils.isBlank(level)){
+				continue;
+			}
+			logger.info("level:{}",Integer.valueOf(level));
+		}
+	}
 
 	@Test
 	public void testThread() throws InterruptedException {

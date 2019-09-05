@@ -12,6 +12,12 @@ public class SimpleTest {
 	private static final Logger logger = LoggerFactory.getLogger(SimpleTest.class);
 
 	@Test
+	public void testNullSet(){
+		TestVo testVo = new TestVo();
+		testVo.setAddress(null);
+	}
+
+	@Test
 	public void testHash(){
 		String test = "QOZRigKHq/y0MUElYC1M/w==";
 		logger.info(test.hashCode() + "");
@@ -40,3 +46,4 @@ public class SimpleTest {
 		}
 	}
 }
+

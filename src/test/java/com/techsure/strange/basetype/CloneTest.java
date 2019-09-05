@@ -11,6 +11,14 @@ import org.slf4j.LoggerFactory;
  */
 public class CloneTest {
 	private static final Logger logger= LoggerFactory.getLogger(CloneTest.class);
+
+	@Test
+	public void testNullAttr(){
+		Integer age = new Student().getAge();
+		if(age == null){
+			logger.info("access");
+		}
+	}
 	
 	@Test
 	public void testClone(){

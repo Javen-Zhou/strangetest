@@ -1,7 +1,5 @@
 package com.techsure.strange.basetype;
 
-import org.jetbrains.annotations.Contract;
-
 import java.util.Objects;
 
 
@@ -11,7 +9,6 @@ import java.util.Objects;
  */
 public  interface InterfaceTest<K,V> {
 	void test1();
-	@Contract(mutates="this")
 	default boolean replace(K key, V oldValue, V newValue) {
 		Object curValue = get(key);
 		if (!Objects.equals(curValue, oldValue) ||

@@ -3,6 +3,7 @@ package com.techsure.strange.basetype;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,14 @@ import java.util.function.BiConsumer;
  */
 public class JSONTest {
 	private static final Logger logger = LoggerFactory.getLogger(JSONTest.class);
+
+	@Test
+	public void testNull(){
+		net.sf.json.JSONObject jsonObject = net.sf.json.JSONObject.fromObject("{\"test\":null}");
+		String model = jsonObject.getString("test");
+		logger.info("model:{}", StringUtils.isNotBlank(model));
+	}
+
 
 	@Test
 	public void testJSONArray() {

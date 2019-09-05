@@ -14,8 +14,13 @@ public class EnumTest {
 	private static final Logger logger = LoggerFactory.getLogger(EnumTest.class);
 
 	@Test
+	public void test2(){
+		logger.info(TimeDiffEnum.ONE_HOUR_AGO + "");
+	}
+
+	@Test
 	public void test1(){
-		logger.info("" + TimeDiffEnum.valueOf("1HourAgo").getValue());
+		logger.info("" + TimeDiffEnum.valueOf("ONE_HOUR_AGO").getValue());
 	}
 }
 

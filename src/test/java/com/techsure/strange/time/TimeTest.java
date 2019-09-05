@@ -22,6 +22,12 @@ public class TimeTest {
 
 	private static final Logger logger = LoggerFactory.getLogger(TimeTest.class);
 
+
+	@Test
+	public void testFormat(){
+		logger.info(DateFormatUtils.format(new Date(),"HHmmss"));
+	}
+
 	@Test
 	public void testGetEightHourFolderName() throws ParseException {
 		String str = "2018-12-17 24:00:00";

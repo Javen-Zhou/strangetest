@@ -4,10 +4,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -16,6 +13,102 @@ import java.util.concurrent.TimeUnit;
  */
 public class ListTest {
 	private static final Logger logger = LoggerFactory.getLogger(ListTest.class);
+
+	@Test
+	public void testCompare(){
+		List<Integer> list = Arrays.asList(70,
+				62,
+				34,
+				37,
+				36,
+				64,
+				61,
+				3 ,
+				22,
+				71,
+				60,
+				35,
+				1 ,
+				23,
+				27,
+				5 ,
+				59,
+				33,
+				28,
+				39,
+				31,
+				48,
+				24,
+				2 ,
+				25,
+				63,1,
+				2,
+				3,
+				5,
+				22,
+				23,
+				24,
+				25,
+				27,
+				28,
+				31,
+				33,
+				34,
+				35,
+				36,
+				37,
+				39,
+				48,
+				50,
+				51,
+				52,
+				54,
+				56,
+				57,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				70);
+		//list.sort(Double::compare);
+		Collections.sort(list);
+		list.forEach(e->logger.info("num:{}",e));
+
+	}
+
+	@Test
+	public void testSort(){
+		List<Double> list = Arrays.asList( 40.97,
+		43.04,
+		43.91,
+		41.42,
+		39.92,
+		37.95,
+		46.02);
+		Collections.sort(list);
+		list.forEach(e -> logger.info("num:{}",e));
+	}
+
+	@Test
+	public void testSubList2(){
+		List<Integer> list = new ArrayList<>();
+		list.add(0);
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(6);
+		list.add(7);
+		list.add(8);
+		list.add(9);
+		List<Integer> copyList = list.subList(2, 6);
+		for(int i=0;i<copyList.size();i++){
+			logger.info(copyList.get(i) + "");
+		}
+	}
 
 	@Test
 	public void testToString(){
